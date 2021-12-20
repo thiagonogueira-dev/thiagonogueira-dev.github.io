@@ -1,0 +1,200 @@
+*{
+    font-family:Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+}
+
+figure{
+    margin: 0;
+}
+
+/***********
+   HEADER
+***********/
+
+.section-navegation{
+    display: flex;
+    padding-left: 30px;
+    margin-top: 30px;
+    border-color: gray;
+    border-top-style:solid;
+    border-top-width: 1px;
+    border-bottom-style:solid;
+    border-bottom-width: 0.5px;
+}
+
+.section-navegation hr{
+    height: 60px;
+    margin: 0 0 0 50px;
+}
+
+.section-navegation ul{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 0px;
+    padding-left: 20px;
+}
+
+.section-navegation li{
+    list-style: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.section-navegation a{
+    color: black;
+    text-decoration: none;
+}
+
+
+/***********
+    MAIN
+***********/
+
+
+.body-background{
+    margin-top: 0px;
+    background-color: rgb(147, 212, 238);
+}
+
+main {
+    width: 1080px;
+    margin: auto;
+    display: flex;
+    
+}
+
+
+.main-left{
+    padding-top: 50px;
+    width: 300px;
+}
+.description{
+    display: inline;
+}
+
+.description h1{
+    font-size: 2.0rem;
+}
+
+.description p{
+    font-size: 1rem;
+}
+
+.background-image{
+    width: 290px;
+}
+
+.description img{
+    border: none;
+    border-radius: 50px;
+}
+
+.main-left-top{
+    position: relative;
+    margin-top: 25px;
+    border-style: groove;
+    background-color: white;
+}
+
+.main-left-top h3{
+    font-size: 1.1rem;
+}
+
+.main-left-top p{
+    font-size: 0.9rem;
+}
+
+.main-left-top .avatar{
+    position: absolute;
+    border: none;
+    border-radius: 50px;
+    top: 190px;
+    right: 15px;
+}
+
+.main-right{
+    padding-top: 0;
+    padding-left: 50px;
+}
+
+.main-right h2{
+    font-size: 1.6rem;
+}
+
+.main-article{
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+    background-color: white;
+    margin-top: 50px;
+    height: 700px;
+    padding: 0px;
+}
+
+.main-article a{
+    margin-top: 50px;
+    text-decoration: none;
+    color: gray;
+}
+
+.caption-main{
+    font-size: 0.9rem;
+    padding: 15px 30px 10px 30px;
+    color: gray;
+}
+
+.article-background{
+    padding: 40px 15px 40px 40px;
+    margin: 0px;
+    width: 700px;
+}
+
+.header-main{
+    display: flex;
+    height: 150px;
+    flex-direction: row;
+    border-bottom-style: groove ;
+}
+
+.div-header{
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 10px;
+    width: 480px;
+    border-right-style: groove;
+}
+
+.div-header p{
+    font-size: 0.8rem;
+}
+
+.div-header-right{
+    margin-left: 95px;
+    width: 110px;
+}
+
+.div-header-right p{
+    position: relative;
+    top: 10px;
+    margin: 0px;
+    padding-top: 20px;
+    font-size: 0.7rem;
+}
+
+.div-header-right figcaption{
+    position: absolute;
+    font-size: 0.8rem;
+    color: gray;
+}
+
+.div-header-right img{
+    position: relative;
+    left: 80px;
+    top: 30px;
+    border-radius: 50px;
+}
+
