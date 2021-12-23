@@ -1,5 +1,11 @@
+:root{
+    --background-color: rgb(244, 244, 244);
+    --font-gray: rgb(136, 136, 136);
+    --border-color: rgb(227, 227, 227);
+}
+
 *{
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
 
@@ -11,42 +17,71 @@ figure{
     margin: 0;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
 /***********
-   HEADER
+   NAV
 ***********/
 
 .section-navegation{
     display: flex;
-    padding-left: 30px;
     margin-top: 30px;
-    border-color: gray;
+    padding-left: 30px;
     border-top-style:solid;
     border-top-width: 1px;
     border-bottom-style:solid;
+    border-bottom-color: var(--border-color);
     border-bottom-width: 0.5px;
 }
 
-.section-navegation hr{
+.section-navegation h3{
+    letter-spacing: 5px;
+}
+
+.hr-1{
+    width: 0px;
     height: 60px;
     margin: 0 0 0 50px;
 }
 
 .section-navegation ul{
     display: flex;
-    margin-top: 20px;
-    margin-left: 0px;
+    color: red;
     padding-left: 20px;
 }
 
 .section-navegation li{
     list-style: none;
-    padding-left: 10px;
-    padding-right: 10px;
+    letter-spacing: 2px;
+    padding: 5px 20px 0px 20px;
+    border-left: solid;
+    border-width: 1px;
+    border-color: var(--border-color);
 }
 
-.section-navegation a{
+.section-navegation li:first-child{
+    margin-left: 0px;
+    border:none;
+}
+
+.section-navegation li:hover{
+    background-color: var(--background-color);
+    border: none;
+    border-radius: 5px;
+}
+
+.section-navegation li a{
     color: black;
     text-decoration: none;
+}
+
+.section-navegation img{
+    margin: 18px 0px 0px 390px;
+    height: 28px;
+    width: 28px;
 }
 
 
@@ -57,31 +92,31 @@ figure{
 
 .body-background{
     margin-top: 0px;
-    background-color: rgb(147, 212, 238);
+    background-color: var(--background-color);
 }
 
 main {
     width: 1080px;
     margin: auto;
-    display: flex;
-    
+    display: flex;   
 }
 
 
 .main-left{
-    padding-top: 50px;
+    padding-top: 52px;
     width: 300px;
 }
-.description{
-    display: inline;
-}
 
-.description h1{
+.description h2{
+    letter-spacing: 5px;
     font-size: 2.0rem;
 }
 
 .description p{
-    font-size: 1rem;
+    color:var(--font-gray);
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-bottom: 35px;
 }
 
 .background-image{
@@ -95,25 +130,93 @@ main {
 
 .main-left-top{
     position: relative;
-    margin-top: 25px;
-    border-style: groove;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--border-color);
     background-color: white;
 }
 
 .main-left-top h3{
-    font-size: 1.1rem;
+    padding-left: 10px;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
 }
 
 .main-left-top p{
-    font-size: 0.9rem;
+    padding-left: 10px;
+    color: var(--font-gray);
+    font-size: 0.8rem;
 }
 
 .main-left-top .avatar{
     position: absolute;
     border: none;
     border-radius: 50px;
-    top: 190px;
+    top: 170px;
     right: 15px;
+}
+
+.main-left-bottom{
+    margin: 35px 0px 35px 0px;
+    letter-spacing: 3px;
+}
+
+.main-left-bottom-article{
+    position: relative;
+    padding-top: 15px;
+    height: 90px;
+    border-top-style: dotted;
+    border-top-width: 2px;
+    border-top-color: var(--border-color);
+}
+
+.main-left-bottom-article img{
+    margin: 0px;
+    height: 50px;
+}
+
+.main-left-bottom-article:first-child{
+    border-top: none;
+}
+
+.main-left-bottom-article h4{
+    position: absolute;
+    margin: 0px 0px 0px 10px;
+    left: 50px;
+    bottom: 40px;
+    font-size: 0.7rem;
+}
+
+.main-left-bottom-article p{
+    position: absolute;
+    margin: 0px;
+    left: 60px;
+    bottom: 20px;
+    font-size: 0.7rem;
+}
+
+.about{
+    margin-top: 30px;
+    height: 200px;
+}
+
+.about h3{
+    letter-spacing: 3px;
+}
+
+.about p{
+    color: var(--font-gray);
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+.about a{
+    text-decoration: none;
+    letter-spacing: 3px;
+    color: black;
+    padding-left: 30px;   
 }
 
 .main-right{
@@ -122,29 +225,25 @@ main {
 }
 
 .main-right h2{
-    font-size: 1.6rem;
+    letter-spacing: 2px;
+    font-size: 1.4rem;
 }
 
 .main-article{
     border-style: solid;
     border-width: 1px;
-    border-color: gray;
+    border-color: var(--border-color);
     background-color: white;
     margin-top: 50px;
+    margin-bottom: 20px;
     height: 700px;
     padding: 0px;
-}
-
-.main-article a{
-    margin-top: 50px;
-    text-decoration: none;
-    color: gray;
 }
 
 .caption-main{
     font-size: 0.9rem;
     padding: 15px 30px 10px 30px;
-    color: gray;
+    color: var(--font-gray);
 }
 
 .article-background{
@@ -153,11 +252,23 @@ main {
     width: 700px;
 }
 
+.main-article a{
+    display: inline-block;
+    padding: 50px 0px 0px 75px;
+    font-size: 0.8rem;
+    text-decoration: none;
+    letter-spacing: 3px;
+    color: black;
+}
+
+
 .header-main{
     display: flex;
     height: 150px;
     flex-direction: row;
-    border-bottom-style: groove ;
+    border-bottom-style: solid ;
+    border-color: var(--border-color);
+    border-width: 2px;
 }
 
 .div-header{
@@ -165,20 +276,24 @@ main {
     padding-left: 30px;
     padding-top: 10px;
     width: 480px;
-    border-right-style: groove;
+    border-right-style: solid;
+    border-color: var(--border-color);
+    border-width: 2px;
 }
 
 .div-header p{
+    color: var(--font-gray);
     font-size: 0.8rem;
 }
 
 .div-header-right{
     margin-left: 95px;
-    width: 110px;
+    width: 130px;
 }
 
 .div-header-right p{
     position: relative;
+    letter-spacing: 1px;
     top: 10px;
     margin: 0px;
     padding-top: 20px;
@@ -187,8 +302,10 @@ main {
 
 .div-header-right figcaption{
     position: absolute;
+    text-decoration:underline;
+    text-decoration-style:dashed;
     font-size: 0.8rem;
-    color: gray;
+    color: var(--font-gray);
 }
 
 .div-header-right img{
@@ -198,3 +315,17 @@ main {
     border-radius: 50px;
 }
 
+footer{
+    display: flex;
+    margin: 40px 0px 70px 0px;
+}
+
+footer a{
+    text-decoration: none;
+    margin-left: 50px;
+    color: black;
+}
+
+footer a:first-child{
+    color: var(--font-gray);
+}
