@@ -24,6 +24,13 @@ header h1, header p, header a, header li, main h2, main h4, article h3{
     list-style: none;
 }
 
+header{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+}
+
 header h1{
     color: white;
 }
@@ -63,6 +70,19 @@ main h2{
     border-top-style: solid;
     border-width: 1px;
     border-color: var(--date-color);
+    padding: 10px 0px;
+    margin: 10px 0px;
+}
+
+.main-top-right article:first-of-type{
+    border-top-style: none;
+}
+
+.main-top-right figure{
+    display: flex;
+}
+.main-top-right article img{
+    margin-right: 15px;
 }
 
 article h3{
@@ -89,6 +109,8 @@ article p{
 }
 
 footer{
+    display: flex;
+    justify-content: space-between;
     background-color: black;
 }
 
@@ -103,10 +125,15 @@ footer ul, footer li, footer ol{
     padding: 0px;
 }
 
+footer ol{
+    margin-top: 20px;
+}
+
 footer ol li{
     border-top-style: solid;
     border-width: 1px;
     border-color: var(--border-color);
+    padding: 10px 0px;
 }
 
 footer ol li:first-child{
@@ -122,20 +149,106 @@ footer a{
 /*
 resolução de celular
 */
-@media (min-width:300px) and (max-width:840px){
-    body{
-        width: 100%;
-    }
+@media (max-width:600px){
     header{
-        width: 100%;
-    }
-    header img{
-       width: 100%;
+        height: 110px;
     }
 
-    header ul{
+    #nav-desk{
         display: none;
     }
+
+    #nav-cel{
+        position: absolute;
+        top: 36%;
+        left: 5%;
+        height: 100px;
+        color: white;
+    }
+
+    #nav-cel ul{
+        margin: 0px;
+        padding: 0px;
+        background-color: black;
+    }
+
+    #nav-cel li{
+        margin: 10px;
+        padding: 5px;
+    }
+
+    #nav-cel a{
+        color: white;
+        -bottom: 5px;
+    }
+
+
+    header img{
+       width: 100%;
+       height: 90px;
+       position: absolute;
+    }
+    header h1{
+        font-size: 1.8rem;
+        position: absolute;
+        top: 10%
+        
+    }
+
+    main h2{
+        font-size: 1.3rem;
+    }
+
+    .main-top-left{
+        padding: 0% 2%;
+    }
+    .main-top-left img{
+        width: 100%;
+    }
+
+    .main-top-right{
+        margin: 30px 0px;
+        padding: 0% 2%;
+    }
+
+    .main-top-right article{
+        padding: 0% 3%;
+    }
+
+    
+    .main-bottom{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 1200px;
+        padding: 10px 2%;
+    }
+
+    .main-bottom article{
+        margin-bottom: 30px;
+    }
+    
+    .main-bottom figcaption{
+        margin: 10px 0px 30px 0px;
+    }
+
+    .main-bottom img{
+        width: 100%;
+    }
+
+    footer{
+        flex-direction: column;
+        padding: 0% 2%;
+    }
+
+    footer ul{
+        width: 80%;
+    }
+
+    footer ol{
+        padding: 0% 3%;
+    }
+
 }
 
 
@@ -146,11 +259,11 @@ resolução de desktop
 @media (min-width:992px) {
 
     header{
-        display: flex;
-        justify-content: center;
-        position: relative;
         height: 400px;
-        margin:  auto;
+    }
+
+    #nav-cel{
+        display: none;
     }
 
     header img{
@@ -190,10 +303,6 @@ resolução de desktop
         margin: auto;
         padding: 2.5%;
     }
-    
-    .main-top-right figure{
-        display: flex;
-    }
 
     .main-top-left{
         width: 62%;
@@ -206,19 +315,6 @@ resolução de desktop
     .main-top-right{
         width: 33%;
         margin-left: 5%;
-    }
-
-    .main-top-right article{
-        padding: 10px 0px;
-        margin: 10px 0px;
-    }
-
-    .main-top-right article:first-of-type{
-        border-top-style: none;
-    }
-
-    .main-top-right article img{
-        margin-right: 15px;
     }
 
     .main-bottom{
@@ -242,21 +338,11 @@ resolução de desktop
     }
 
     footer{
-        display: flex;
         flex-direction: row;
-        justify-content: space-between;
         padding: 1% 2.5%;
     }
 
     footer ul{
         width: 29%;
-    }
-
-    footer ol{
-        margin-top: 20px;
-    }
-
-    footer ol li{
-        padding: 10px 0px;
     }
 }
