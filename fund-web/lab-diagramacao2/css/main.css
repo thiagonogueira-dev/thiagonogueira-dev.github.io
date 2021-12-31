@@ -10,6 +10,10 @@
     font-family:Arial, Helvetica, sans-serif;
 }
 
+body{
+    margin: auto;
+}
+
 figure{
     margin: 0;
 }
@@ -20,31 +24,12 @@ header h1, header p, header a, header li, main h2, main h4, article h3{
     list-style: none;
 }
 
-header{
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-
-header img{
-    position: absolute;
-}
-
 header h1{
-    position: absolute;
     color: white;
-    font-size: 2.8rem;
 }
 
 header p{
-    position:absolute;
     color: rgb(180, 179, 179);
-}
-
-header ul{
-    display: flex;
-    flex-direction: row;
-    position: absolute;
 }
 
 header a{
@@ -81,7 +66,6 @@ main h2{
 }
 
 article h3{
-    display: inline-block;
     color: var(--border-color);
     font-size: 1rem;
 }
@@ -90,18 +74,7 @@ article p{
     color:var(--date-color)
 }
 
-.main-top{
-    display: flex;
-}
-
-.main-top-right figure{
-    display: flex;
-}
-
 .main-bottom{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     background-color: var(--main-bottom-background);
 }
 
@@ -116,11 +89,7 @@ article p{
 }
 
 footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     background-color: black;
-    margin: 0;
 }
 
 footer span{
@@ -149,35 +118,63 @@ footer a{
     text-decoration: none;
 }
 
+
+/*
+resolução de celular
+*/
+@media (min-width:300px) and (max-width:840px){
+    body{
+        width: 100%;
+    }
+    header{
+        width: 100%;
+    }
+    header img{
+       width: 100%;
+    }
+
+    header ul{
+        display: none;
+    }
+}
+
+
+
 /*
 resolução de desktop
 */
-
 @media (min-width:992px) {
-    body{
-        margin: auto;
-    }
 
     header{
+        display: flex;
+        justify-content: center;
+        position: relative;
         height: 400px;
         margin:  auto;
     }
 
     header img{
+        position: absolute;
         width: 100%;
         height: 400px;
     }
 
     header h1{
+        position: absolute;
+        font-size: 2.8rem;
         top: 20%;
     }
     
     header p{
+        position:absolute;
         font-size: 0.9rem;
         top: 36%;
     }
     
     header ul{
+        display: flex;
+        flex-direction: row;
+        position: absolute;
         top: 52%;
         left: 19%;
     }
@@ -189,8 +186,13 @@ resolução de desktop
     }
 
     .main-top{
+        display: flex;
         margin: auto;
         padding: 2.5%;
+    }
+    
+    .main-top-right figure{
+        display: flex;
     }
 
     .main-top-left{
@@ -220,6 +222,9 @@ resolução de desktop
     }
 
     .main-bottom{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         height: 450px;
         padding: 1% 2.5% 0% 2.5%;
     }
@@ -237,6 +242,9 @@ resolução de desktop
     }
 
     footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         padding: 1% 2.5%;
     }
 
