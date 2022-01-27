@@ -1,0 +1,5 @@
+.news a, .products a {
+    background-color:var(--blue);
+    padding: 10px 20px;
+    color: #fff;
+}

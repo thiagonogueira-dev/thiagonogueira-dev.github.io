@@ -1,0 +1,42 @@
+* {
+    font-family: Arial, Helvetica,sans-serif;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header ul {
+    list-style:none;
+}
+
+header h1, header a, .news h3, .news p {
+    font-weight: lighter;
+}
+
+header h3, .staff h3, .products h2, .products h3 {
+    font-weight: normal;
+}
+
+/* main */
+
+.news div:last-child{
+    border-right: none;
+}
+
+header a, .news a, .products a {
+    text-decoration: none;
+}
+
+.staff h2 {
+    font-weight: normal;
+}
+
+/* footer */
+
+footer ul {
+    list-style-type:none;
+}
+
+footer a {
+    text-decoration:none;
+}

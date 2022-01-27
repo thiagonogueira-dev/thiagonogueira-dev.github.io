@@ -1,0 +1,26 @@
+header {
+    color:var(--white);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header h3 {
+    position:absolute;
+}
+    
+header h1 {
+    text-align: center;
+    position:relative;
+}
+    
+header p {
+    position:relative;
+    text-align: center;
+    color: var(--gray);
+}
+
+@media (max-width:576px){
+    header{
+        margin: 0px 0px;
+    }
+}

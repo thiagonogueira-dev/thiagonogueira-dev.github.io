@@ -1,0 +1,46 @@
+@media (max-width:576px){
+    header h1 {
+        font-size:3em;
+    }
+}
+
+@media (min-width:1000px){
+    header a {
+        font-size: 0.75em;
+    }
+
+    header h3 {
+        font-size: 0.95em;
+    }
+
+    header h1 {
+        font-size:3.6em;
+    }
+
+    header p {
+        font-size: 0.9em;
+    }
+
+    /* main */
+
+    .news h3 {
+        line-height:1.5em;
+    }
+
+    .news p {
+        font-size: 0.9em;
+        line-height:1.5em;
+    }
+
+    .news a, .products a {
+        font-size: 0.9em;
+    }
+
+    .staff h2, .products h2 {
+        font-size: 2.6em;
+    }
+
+    .products p {
+        line-height: 1.5em;
+    }
+}

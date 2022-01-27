@@ -1,0 +1,10 @@
+@media (min-width:1000px){
+    /* 
+    testes de recursos CSS 3 da aula 
+    */
+
+    .staff img:hover {
+        transform: rotate(360deg);
+        transition: transform 1s linear; 
+    }
+}  

@@ -1,0 +1,32 @@
+footer, footer ul {
+    display:flex;
+    flex-direction: row;
+}
+
+footer {
+    justify-content:space-between;
+    color: var(--gray);    
+}
+
+footer a {
+    color: var(--blue);
+}
+
+@media (min-width:1000px){
+    footer, footer ul {
+        display:flex;
+        flex-direction: row;
+    }
+    
+    footer {
+        margin: 0px 50px;   
+    }
+    
+    footer div {
+        margin-top: 30px;
+    }
+    
+    footer li {
+        margin: 10px;   
+    }
+}
