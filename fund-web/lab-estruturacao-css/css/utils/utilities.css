@@ -140,6 +140,42 @@
     }
 }
 
+
+@media (min-width:577px) and (max-width:999px){
+    .news{
+        flex-direction: column;
+        margin: 30px 0px;
+    }
+
+    .news div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 150px;
+        margin: 30px 20px;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+
+    .staff{
+        flex-direction: column;
+    }
+
+    .staff div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .products{
+        flex-direction: column;
+    }
+
+    .products img{
+        width: 100%;
+    }
+}
+
 @media (min-width:1000px){
     .news, .staff, .products {
         padding: 80px 50px 100px;

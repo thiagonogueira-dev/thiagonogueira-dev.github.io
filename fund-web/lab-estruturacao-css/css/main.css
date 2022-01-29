@@ -66,15 +66,31 @@ header {
         top: 30px;
         right: 70px   
     }
+}
 
-    #nav-cel ul{
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        background-color: black;
-        height: 80px;
+@media (min-width:577px) and (max-width:999px){
+    #nav-desktop{
+        display: none;
+    }
+
+    header{
+        height: 250px;
+    }
+
+    header h1{
+        top:90px;
+    }
+
+    header p{
+        top: 100px;
+    }
+
+    header h3{
+        top:40px;
+        left:20px;
     }
 }
+
 
 @media (min-width:1000px) {
 
