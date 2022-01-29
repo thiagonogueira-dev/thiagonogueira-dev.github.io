@@ -12,6 +12,17 @@ footer a {
     color: var(--blue);
 }
 
+@media (max-width: 576px){
+    footer{
+        justify-content: center;
+        margin: 30px;
+    }
+
+    footer ul li{
+        margin-left: 25px;  
+    }
+}
+
 @media (min-width:1000px){
     footer, footer ul {
         display:flex;

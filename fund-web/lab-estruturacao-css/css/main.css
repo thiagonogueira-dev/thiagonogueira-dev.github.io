@@ -25,10 +25,6 @@
 /* utilities.css */
 @import "./utils/utilities.css";
 
-/* font-awesome.min.css */
-@import "./vendors/font-awesome.min.css";
-
-
 header {
     background-image: url(../images/banner.jpg);
     border-top: 10px solid var(--blue);
@@ -39,6 +35,11 @@ header {
 }
 
 @media (max-width:576px){
+
+    #nav-desktop{
+        display: none;
+    }
+
     header{
         height: 250px;
     }
@@ -46,9 +47,41 @@ header {
     .staff div{
         margin: 30px 20px;
     }
+
+    header h1{
+        top: 80px;
+    }
+
+    header p{
+        top: 90px;
+    }
+
+    header h3{
+        top: 30px;
+        left: 20px;
+    }
+
+    header details{
+        position: absolute;
+        top: 30px;
+        right: 70px   
+    }
+
+    #nav-cel ul{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        height: 80px;
+    }
 }
 
 @media (min-width:1000px) {
+
+    #nav-cel{
+        display: none;
+    }
+
     header {
         height:400px;
         border-top: 10px solid var(--blue);
