@@ -21,6 +21,20 @@ footer a {
     footer ul li{
         margin-left: 25px;  
     }
+
+    footer ul li:first-child{
+        margin-left: 0px;
+    }
+}
+
+@media (min-width:577px) and (max-width:999px){
+    footer{
+        margin: 20px 10px;
+    }
+
+    footer ul li{
+        margin-left: 25px;  
+    }
 }
 
 @media (min-width:1000px){

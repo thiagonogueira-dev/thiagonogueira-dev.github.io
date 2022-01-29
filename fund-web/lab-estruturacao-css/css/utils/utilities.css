@@ -131,6 +131,10 @@
         border-bottom: 1px solid gray;
     }
 
+    .products div:last-child{
+        border-bottom: 0px;
+    }
+
     .products div a{
         width: 100%;
     }
@@ -159,20 +163,44 @@
 
     .staff{
         flex-direction: column;
+        margin: 0px 10px;
     }
 
     .staff div{
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 20px 20px;
+        padding: 20px;
     }
 
     .products{
         flex-direction: column;
+        margin: 0px 20px;
+    }
+
+    .products p{
+        margin: 0px;
+    }
+
+    .products div{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 20px 0px;
+    }
+
+    .products a{
+        width: 100%;
     }
 
     .products img{
         width: 100%;
+    }
+
+    .products div:last-child{
+        padding-bottom: 30px;
+        border-bottom: 1px solid gray;
     }
 }
 
