@@ -7,8 +7,20 @@ btMarcar.onclick = function ()
     let fraseArray = frase.split('');
     for(let i = 0; i < fraseArray.length; ++i)
     {
-        if (fraseArray[i].charCodeAt(0) == 97 || fraseArray[i].charCodeAt(0) == 101 || fraseArray[i].charCodeAt(0) == 105 || fraseArray[i].charCodeAt(0) == 111 || fraseArray[i].charCodeAt(0) == 117)
-            fraseArray[i] = `<b>${fraseArray[i]}</b>`;
+        switch(fraseArray[i].charCodeAt(0))
+        {
+            case 97:
+            case 101:
+            case 105:
+            case 111:
+            case 117:
+            case 65:
+            case 69:
+            case 73:
+            case 79:
+            case 85:
+                fraseArray[i] = `<b>${fraseArray[i]}</b>`;
+        }
     }
     vogais.innerHTML = fraseArray.join('');
 }
