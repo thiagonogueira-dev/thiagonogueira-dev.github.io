@@ -58,12 +58,15 @@ btSeparar.onclick = ()=>
 
     tabela.border = "1px solid";
     tabela.innerHTML = "<tr><th>Palavra</th><th>Ocorrência(s)</th></tr>";
-    for(let i = 0; i < listaPalavras.length; i++)
+    
+    let i = 0;
+    while(i < listaPalavras.length && listaPalavras[i].ocorrencia == listaPalavras[0].ocorrencia)
     {
         if(listaPalavras[i].palavra != '')
         {
             tabela.innerHTML += `<tr><td>${listaPalavras[i].palavra}</td>
             <td>${listaPalavras[i].ocorrencia}</td></tr>`;
         }
+        i++
     }
 }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 9</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        p{
+            font-size: 1.1em;
+        }
+
+        div{
+            display: flex;
+            flex-direction: row;
+        }
+
+        div p{
+            margin: 10px 20px;
+        }
+
+        div input{
+            height: 30px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Questão 9</h1>
+    <p> Faça uma caixa de texto que classifique:<br>
+        - fraca (em vermelho) se só possuir letras minúsculas ou maiúsculas<br>
+        - moderada (em laranja) se possuir letras minúsculas e maiúsculas e números<br>
+        - forte (em verde) se possuir letras minúsculas e maiúsculas, números e caracteres especiais (@, #, !, 
+        $, %, &, *, (, ), -, +, ., =
+    </p>
+    <p>Digite a senha:</p>
+    <div>
+        <input type="password" id="senha" placeholder="Senha">
+        <p id="nivelSenha"></p>
+    </div>
+</body>
+</html>
+<script src="./js/questao9.js"></script>
