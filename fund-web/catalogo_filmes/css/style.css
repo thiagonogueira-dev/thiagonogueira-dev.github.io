@@ -1,0 +1,22 @@
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+.filme{
+    width: 450px;
+    height: 350px;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+}
+
+.filme-header{
+    display: flex;
+    flex-direction: row;
+}
+
+.filme-header img{
+    width: 60px;
+    height: 60px;
+}
