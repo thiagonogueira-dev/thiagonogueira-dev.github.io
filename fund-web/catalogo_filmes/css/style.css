@@ -1,14 +1,39 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    margin: 0px;
+    border-top: 30px solid;
+    border-top-color: rgb(165, 184, 195);
+    background-color: rgb(200, 215, 222);
+}
+
 h1{
+    border: 20px;
+    border-top-color: rgb(165, 184, 195);
+    text-align: center;
+}
+
+.catalogo-filmes{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0px 50px;
+    background-color: rgb(200, 215, 222);
 }
 
 .filme{
-    width: 450px;
-    height: 350px;
-    background-color: blue;
+    position: relative;
+    width: 525px;
+    height: auto;
+    background-color: white;
     display: flex;
     flex-direction: column;
+    margin: 30px 10px;
+    padding: 0px 3px 10px 10px;
 }
 
 .filme-header{
@@ -16,7 +41,77 @@ h1{
     flex-direction: row;
 }
 
-.filme-header img{
-    width: 60px;
-    height: 60px;
+.header-info{
+    width: 220px;
+    margin-left: 6px;
+    padding-top: 10px;
+}
+
+.header-classificacao{
+    width: 90px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.classificacao-idade{
+    padding: 12px;
+    margin: 0px 0px 10px 0px;
+    text-align: center;
+}
+
+.classificacao-estrelas{
+    margin: 10px 5px;
+}
+
+.filme-titulo
+{
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+.filme-elenco, .filme-titulo{
+    margin: 0;
+}
+
+.filme-img{
+    width: 175px;
+    height: 120px;
+    padding-top: 10px;
+}
+
+
+.filme-resumo{
+    display: flex;
+    justify-content: center;
+    margin: 20px 10px;
+}
+
+.titulos{
+    margin: 5px 0px 0px 5px;
+    font-size: 1.1rem;
+}
+
+.sem-semelhante, .similares-img{
+    margin: 5px 0px 0px 15px;
+}
+
+.titulos-similares{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.similares-img{
+    width: 80px;
+}
+
+.avaliacoes-titulo{
+    margin: 15px 0px 0px 5px;
+    font-size: 1.1rem;
+}
+
+.estrelas{
+    color: rgb(255, 187, 28);
 }

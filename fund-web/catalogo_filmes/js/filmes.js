@@ -4,25 +4,66 @@ window.onload = () =>
 
     console.log(filmes);
 
-    $(() =>
-    {
-        preencherFilmes();
-    })
+    preencherFilmes();
 
     function preencherFilmes ()
     {
-        filmes.forEach((filme) =>
+        for(let i = 0; i < filmes.length; i++)
         {
-            let $filmes = $("<div>").addClass("filme");
-            let $imagem = $("<img>").attr({src: filme.figura, alt: filme.titulo});
+            let $filmesCatalogo = $("<div>").addClass("filme");
+            let $filmeHeader = $("<div>").addClass("filme-header");
+            let $headerInfo = $("<div>").addClass("header-info");
+            let $headerClassificacao = $("<div>").addClass("header-classificacao");
+            let $titulosSemelhantes = $("<div>").addClass("titulos-similares");
+            let $comentarios = $("<div>").addClass("comentarios");
+            let $estrelas = $("<div>").addClass("estrelas");
+            let $imagem = $("<img>").attr({src: filmes[i].figura, alt: filmes[i].titulo}).addClass("filme-img");
+            $headerInfo
+                .append($("<h3>").text(filmes[i].titulo).addClass("filme-titulo"))
+                .append($("<p>").text(filmes[i].generos).addClass("filme-generos"))
+                .append($("<b>").text(`Elenco:`).addClass("filme-elenco"))
+                .append($("<p>").text(filmes[i].elenco).addClass("filme-elenco"));
             
-            $filmes
-                .append($("<h3>").text(filme.titulo))
-                .append($("<p>").text(filme.resumo))
-                .append($("<p>").text(filme.elenco))
-                .append($imagem);   
-            $(".filme").append($filmes);
-        })
+            filmes[i].classificacao == 0 ?  $headerClassificacao.append($("<p>").text("Livre").addClass("classificacao-idade")) : $headerClassificacao.append($("<p>").text(filmes[i].classificacao).addClass("classificacao-idade"));
+            for(let j = 0; j < filmes[i].opinioes[0].rating; j++)
+            {
+                $estrelas.append($("<i>").addClass("fa fa-star"));
+            }
+            $headerClassificacao.append($estrelas);
+            
+            $filmeHeader
+                .append($imagem)
+                .append($headerInfo)
+                .append($headerClassificacao);
+            $filmesCatalogo
+                .append($filmeHeader)                  
+                .append($("<p>").text(filmes[i].resumo).addClass("filme-resumo"))
+                .append($("<b>").text("Titulos semelhantes").addClass("titulos"))
+            if (filmes[i].titulosSemelhantes.length > 0)
+            {
+                for(let j = 0; j < filmes[i].titulosSemelhantes.length; j++)
+                {
+                    $titulosSemelhantes
+                        .append($("<img>").attr({src: filmes[filmes[i].titulosSemelhantes[j] - 1].figura, alt: filmes[filmes[i].titulosSemelhantes[j] - 1].titulo})
+                        .addClass("similares-img"));
+                }
+                $filmesCatalogo.append($titulosSemelhantes);
+            }
+            else $filmesCatalogo.append($("<p>").text("Nenhum título semelhante encontrado").addClass("sem-semelhante"));
+            
+            $filmesCatalogo.append($("<b>").text("Avaliações").addClass("avaliacoes-titulo"));
+            filmes[i].opinioes.forEach((opiniao) =>
+            {
+                    $comentarios.append($("<blockquote>").text(opiniao.descricao));
+            })
+            $filmesCatalogo.append($comentarios);
+
+
+            $(".catalogo-filmes").append($filmesCatalogo);
+            if(filmes[i].classificacao >= 0 && filmes[i].classificacao <= 14) document.getElementsByClassName("classificacao-idade")[i].style.backgroundColor = "green";
+            else if (filmes[i].classificacao > 14 && filmes[i].classificacao < 18) document.getElementsByClassName("classificacao-idade")[i].style.backgroundColor = "yellow";
+            else document.getElementsByClassName("classificacao-idade")[i].style.backgroundColor = "red";
+        }
     }
 
 }
