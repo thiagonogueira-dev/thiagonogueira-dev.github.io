@@ -15,7 +15,6 @@ window.onload = () =>
             let $headerInfo = $("<div>").addClass("header-info");
             let $headerClassificacao = $("<div>").addClass("header-classificacao");
             let $titulosSemelhantes = $("<div>").addClass("titulos-similares");
-            let $comentarios = $("<div>").addClass("comentarios");
             let $estrelas = $("<div>").addClass("estrelas");
             let $imagem = $("<img>").attr({src: filmes[i].figura, alt: filmes[i].titulo}).addClass("filme-img");
             $headerInfo
@@ -25,7 +24,13 @@ window.onload = () =>
                 .append($("<p>").text(filmes[i].elenco).addClass("filme-elenco"));
             
             filmes[i].classificacao == 0 ?  $headerClassificacao.append($("<p>").text("Livre").addClass("classificacao-idade")) : $headerClassificacao.append($("<p>").text(filmes[i].classificacao).addClass("classificacao-idade"));
-            for(let j = 0; j < filmes[i].opinioes[0].rating; j++)
+            let media = 0;
+            for(let j =0; j < filmes[i].opinioes.length; j++)
+            {
+                media += filmes[i].opinioes[j].rating
+            }
+            media /= filmes[i].opinioes.length;
+            for(let j = 0; j < parseInt(media); j++)
             {
                 $estrelas.append($("<i>").addClass("fa fa-star"));
             }
@@ -54,10 +59,14 @@ window.onload = () =>
             $filmesCatalogo.append($("<b>").text("Avaliações").addClass("avaliacoes-titulo"));
             filmes[i].opinioes.forEach((opiniao) =>
             {
+                    let $comentarios = $("<div>").addClass("comentarios");
                     $comentarios.append($("<blockquote>").text(opiniao.descricao));
+                    for(let j = 0; j < opiniao.rating; j++)
+                    {
+                        $comentarios.append($("<i>").addClass("fa fa-star"));
+                    }
+                    $filmesCatalogo.append($comentarios);
             })
-            $filmesCatalogo.append($comentarios);
-
 
             $(".catalogo-filmes").append($filmesCatalogo);
             if(filmes[i].classificacao >= 0 && filmes[i].classificacao <= 14) document.getElementsByClassName("classificacao-idade")[i].style.backgroundColor = "green";
@@ -65,5 +74,4 @@ window.onload = () =>
             else document.getElementsByClassName("classificacao-idade")[i].style.backgroundColor = "red";
         }
     }
-
 }
