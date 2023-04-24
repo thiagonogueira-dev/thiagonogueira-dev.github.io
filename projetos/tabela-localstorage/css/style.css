@@ -1,0 +1,9 @@
+.selecionado{
+    background-color: gold;
+}
+
+table, th, td{
+    border: 1px solid;
+    border-color: gray;
+    border-collapse: collapse;
+}
